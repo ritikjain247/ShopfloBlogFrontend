@@ -7,7 +7,7 @@ export default function BlogCard({ blog }) {
         <Link href={`/blogs/${blog.slug}`} passHref>
             <div className={cardStyles.blogCard}>
                 <div className={cardStyles.imageWrapper}>
-                    <Image className={cardStyles.coverImage} alt='Cover Image' layout='fill' src={`http://localhost:1337${blog.coverImg.data.attributes.url}`} alt="" />
+                    <Image className={cardStyles.coverImage} alt='Cover Image' layout='fill' src={`http://localhost:1337${blog.coverImg.data.attributes.url}`} />
                 </div>
                 <div className={cardStyles.cardContainer}>
                     <div className={cardStyles.blogTextWrapper}>

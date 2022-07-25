@@ -19,7 +19,7 @@ export default function Blog({ blog }) {
                     </div>
                 </div>
                 <div className={blogStyles.imageWrapper}>
-                    <Image className={blogStyles.coverImage} alt='Cover Image' layout='fill' src={`http://localhost:1337${blog.coverImg.data.attributes.url}`} alt="" />
+                    <Image className={blogStyles.coverImage} alt='Cover Image' layout='fill' src={`http://localhost:1337${blog.coverImg.data.attributes.url}`} />
                 </div>
                 <div className={blogStyles.body}>
 
