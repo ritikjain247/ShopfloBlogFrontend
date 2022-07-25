@@ -1,0 +1,118 @@
+
+.imageWrapper > span {
+  position: unset !important;
+}
+
+.imageWrapper .coverImage {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.imageWrapper{
+  width: 100%;
+  position: relative;
+}
+
+
+.blogCards {
+    display: flex;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  
+    @include respond(tab) {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 2rem;
+    }
+  }
+  
+  .blogCard {
+    margin: 0.5rem 1rem;
+    padding: 1rem;
+    background: $coal-light-color;
+    border-radius: 0.5rem;
+    display: flex;
+    cursor: pointer;
+    color: $white-color;
+  
+    @include respond(tab) {
+      margin: 0rem;
+      padding: 0;
+      background: $coal-light-color;
+      justify-content: flex-start;
+      border: 1px solid $coal-light-color;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+  .imageWrapper{
+    width: 25%;
+  }
+  }
+
+  .blogCard:hover{
+    background-color: $primary-dark-color;
+    transform: scale(1.025);
+    
+    .blogDescription, .info{
+      color: $coal-dark-color;
+    }
+  }
+
+
+  .cardContainer {
+    height: 100%;
+    width: 75%;
+    
+    .info {
+      display: flex;
+      align-items: center;
+      grid-gap: 1rem;
+      color: $off-white-color;
+      font-size: 0.8rem;
+    }
+  }
+  
+  .blogImage {
+    max-height: 10rem;
+    padding: 0.5rem;
+    object-fit: contain;
+  }
+  
+  .blogTextWrapper {
+    // background: $blizzard-dark-color;
+    padding: 1rem 1.25rem 1.25rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    height: 100%;
+    // color: $color-accent-yellow;
+  }
+  
+  .blogTitle {
+    font-size: 1.1rem;
+  }
+  
+  .blogDescription {
+    color: $gray-light-color;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* for each blog page */
+  
+  .header{
+    margin: 2rem 0;
+    span {
+      color: $gray-dark-color;
+    }
+  }
+  .title {
+    justify-content: flex-start;
+  }
+  .subtitle{
+    color: $off-white-color;
+  }

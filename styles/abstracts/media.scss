@@ -1,0 +1,23 @@
+$bp-phone: 35em;
+$bp-tab: 62em; // 992px
+$bp-desktop: 82em; // 1312px
+
+@mixin respond($device) {
+    @if $device == "phone" {
+        @media only screen and (min-width: $bp-phone) {
+            @content;
+        }
+    }
+
+    @if $device == "tab" {
+        @media only screen and (min-width: $bp-tab) {
+            @content;
+        }
+    }
+
+    @if $device == "desktop" {
+        @media only screen and (min-width: $bp-desktop) {
+            @content;
+        }
+    }
+}
