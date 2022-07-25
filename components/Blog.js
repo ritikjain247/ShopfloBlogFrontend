@@ -19,7 +19,7 @@ export default function Blog({ blog }) {
                     </div>
                 </div>
                 <div className={blogStyles.imageWrapper}>
-                    <Image className={blogStyles.coverImage} alt='Cover Image' layout='fill' src={`http://localhost:1337${blog.coverImg.data.attributes.url}`} />
+                    <Image className={blogStyles.coverImage} alt='Cover Image' layout='fill' src={`${(process.env.STRAPIURL || "http://localhost:1337") + '/api/blogs?populate=*'}${blog.coverImg.data.attributes.url}`} />
                 </div>
                 <div className={blogStyles.body}>
 

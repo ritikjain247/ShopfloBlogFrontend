@@ -9,7 +9,9 @@ export default function blog({ blog }) {
 }
 
 export async function getStaticPaths() {
-    const res = await axios.get("http://localhost:1337/api/blogs?populate=*");
+
+    const strapiUrl = (process.env.STRAPIURL || "http://localhost:1337") + '/api/blogs?populate=*';
+    const res = await axios.get(strapiUrl);
     const blogs = res.data.data;
 
     const paths = blogs.map((blog) => ({
@@ -24,7 +26,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const strapiUrl = process.env.STRAPIURL || "http://localhost:1337/api/blogs?populate=*";
+
+    const strapiUrl = (process.env.STRAPIURL || "http://localhost:1337") + '/api/blogs?populate=*';
+
     const res = await axios.get(`${strapiUrl}&filters\[Slug\][$eq]=${params?.slug}`);
     const blog = res.data.data[0];
 
