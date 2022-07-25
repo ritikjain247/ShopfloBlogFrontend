@@ -15,7 +15,7 @@ export default function Blog({ blog }) {
                     <h2 className={blogStyles.title}>{blog.title}</h2>
                     <div className={blogStyles.info}>
                         <span>{blog.author} |</span>
-                        <span>{new Date(blog.publishedAt).toLocaleString()}, {blog.ttr} mins read</span>
+                        <span>{new Date(blog.publishedAt).toUTCString()}, {blog.ttr} mins read</span>
                     </div>
                 </div>
                 <div className={blogStyles.imageWrapper}>

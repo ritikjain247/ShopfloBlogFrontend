@@ -24,7 +24,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await axios.get(`http://localhost:1337/api/blogs?populate=*&filters\[Slug\][$eq]=${params?.slug}`);
+    const strapiUrl = process.env.STRAPIURL || "http://localhost:1337/api/blogs?populate=*";
+    const res = await axios.get(`${strapiUrl}&filters\[Slug\][$eq]=${params?.slug}`);
     const blog = res.data.data[0];
 
     console.log('Blog: ', blog);

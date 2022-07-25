@@ -8,7 +8,6 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
-  border-radius: 0.5rem 0 0 0.5rem;
 }
 
 .imageWrapper{
@@ -49,10 +48,14 @@
         margin-right: 0;
       }
     }
+      
+    .imageWrapper{
+      width: 25%;
+      .coverImage{
+        border-radius: 0.5rem 0 0 0.5rem;
+      }
+    }
     
-  .imageWrapper{
-    width: 25%;
-  }
   }
 
   .blogCard:hover{
@@ -115,4 +118,8 @@
   }
   .subtitle{
     color: $off-white-color;
+  }
+
+  .body{
+    margin: 2rem;
   }

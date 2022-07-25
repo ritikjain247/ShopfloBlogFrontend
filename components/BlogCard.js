@@ -15,7 +15,7 @@ export default function BlogCard({ blog }) {
                         <p className={cardStyles.blogDescription}>{blog.description}</p>
                         <div className={cardStyles.info}>
                             <span>{blog.ttr} min read,</span>
-                            <span> Published on:{new Date(blog.publishedAt).toLocaleString()}</span>
+                            <span> Published on:{new Date(blog.publishedAt).toUTCString()}</span>
                         </div>
                     </div>
                 </div>

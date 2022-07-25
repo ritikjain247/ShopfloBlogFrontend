@@ -25,13 +25,10 @@ export default function blogs({ blogs }) {
 
 export async function getStaticProps() {
 
-    // const strapiUrl = process.env.STRAPIURL || "http://localhost:1337/api/blogs";
-    const res = await axios.get("http://localhost:1337/api/blogs?populate=*");
+    const strapiUrl = process.env.STRAPIURL || "http://localhost:1337/api/blogs?populate=*";
+    const res = await axios.get(strapiUrl);
     const blogs = res.data.data;
     // const meta = res.meta;
-
-    console.log('Res Data:', res.data);
-    console.log('Strapi Response:', blogs);
 
     return {
         props: {
