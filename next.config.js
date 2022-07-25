@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'shopflo-strapi-cms.herokuapp.com', 'res.cloudinary.com'],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
