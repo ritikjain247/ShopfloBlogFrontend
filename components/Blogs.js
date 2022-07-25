@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import blogsStyles from '../styles/Blogs.module.scss';
 import BlogCard from './BlogCard';

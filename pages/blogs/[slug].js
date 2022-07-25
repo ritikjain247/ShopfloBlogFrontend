@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import axios from 'axios';
-import blogsStyles from '../../styles/Blogs.module.scss';
 import Blog from '../../components/Blog';
 
 export default function blog({ blog }) {
